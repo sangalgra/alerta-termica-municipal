@@ -1,0 +1,37 @@
+# Configuración del proyecto — Sistema de alerta térmica municipal
+# Ámbito MVP: provincia de Alicante (Comunitat Valenciana)
+
+aemet:
+  base_url: "https://opendata.aemet.es/opendata/api"
+  prediccion_municipio_endpoint: "/prediccion/especifica/municipio/diaria/{municipio_id}"
+  rate_limit_requests_per_minute: 50
+  request_delay_seconds: 1.5
+  timeout_seconds: 20
+  max_retries: 3
+
+paths:
+  raw_dir: "data/raw/aemet"
+  raw_dir_ine: "data/raw/ine"
+  staging_dir: "data/staging"
+  trusted_dir: "data/trusted"
+  logs_dir: "logs"
+
+ine:
+  base_url_csv: "https://www.ine.es/jaxiT3/files/t/es/csv_bdsc"
+  # Tabla 33591 = Alicante especificamente (el INE publica una tabla
+  # por provincia). Verificado 2026-07-30.
+  tabla_id: "33591"
+  request_delay_seconds: 1.0
+  timeout_seconds: 60
+  max_retries: 3
+
+# Códigos INE verificados: https://pegv.gva.es/es/-/alicante-1
+municipios_mvp:
+  - id: "03014"
+    nombre: "Alacant/Alicante"
+  - id: "03031"
+    nombre: "Benidorm"
+  - id: "03065"
+    nombre: "Elx/Elche"
+  - id: "03099"
+    nombre: "Orihuela"

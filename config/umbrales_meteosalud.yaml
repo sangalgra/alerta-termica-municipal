@@ -1,0 +1,15 @@
+# Umbrales reales del Plan Nacional de Actuaciones Preventivas de los
+# Efectos del Exceso de Temperaturas sobre la Salud — Anexo II 2026.
+# Fuente: https://www.sanidad.gob.es/areas/sanidadAmbiental/riesgosAmbientales/calorExtremo/docs/Anexo_II_Umbrales_zonas_meteosalud_2026.pdf
+#
+# Mapeo municipio -> zona VERIFICADO manualmente el 2026-07-31 contra
+# https://www.sanidad.gob.es/excesoTemperaturas/meteosalud.do
+# (confirmado con municipio de control "Ibi", que dio zona distinta).
+#
+# Este umbral es ANUAL, no diario — no hay que revisarlo cada ejecución.
+
+zonas_meteosalud:
+  - zona_id: "770303 Litoral sur de Alicante"
+    provincia: "Alicante"
+    umbral_temperatura_c: 34.2
+    municipios_incluidos: ["03014", "03031", "03065", "03099"]

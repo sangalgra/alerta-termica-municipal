@@ -1,0 +1,9 @@
+requests>=2.31
+PyYAML>=6.0
+python-dotenv>=1.0
+pandas>=2.0
+pyarrow>=14.0
+pandera>=0.18
+pytest>=8.0
+pytest-mock>=3.12
+streamlit>=1.30
