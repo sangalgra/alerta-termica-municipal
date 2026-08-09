@@ -9,10 +9,10 @@ data/raw/*
 !data/raw/aemet/bkp/.gitkeep
 !data/raw/ine/.gitkeep
 !data/raw/ine/bkp/.gitkeep
-data/staging/*
-!data/staging/.gitkeep
-data/trusted/*
-!data/trusted/.gitkeep
+# Staging y Trusted SÍ se versionan — es el histórico que la app necesita
+# y que el workflow diario actualiza automáticamente.
+!data/staging/*.parquet
+!data/trusted/*.parquet
 logs/*
 !logs/.gitkeep
 .vscode/
